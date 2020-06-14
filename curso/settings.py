@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from typing import cast
 # from typing import cast
 
 from decouple import Csv, config
@@ -79,9 +80,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'curso.wsgi.application'
 
+# Configuração Django Debug Toolbar
+
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0,'debug_toolbar.middleware.DebugToolbarMiddleware')
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
 default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
