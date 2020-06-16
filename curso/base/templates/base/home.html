@@ -10,7 +10,7 @@
 
     <meta name="description" content="página do curso Rios de Luz">
     <meta name="author" content="Sergio Casas">
-
+		<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -34,70 +34,105 @@
 		  
 		</div>
 	  </nav>
-    <div class="container-fluid">
+    <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			
 			<div class="jumbotron">
 				<h2>
-					Rios de Luz
+					Curso de Cinesiologia Aplicada/Touch for Health
 				</h2>
 				<p>
-					Limpando o passado e iluminando o futuro.
+					Rios de Luz é um conjunto de técnicas corporais e energéticas, 
+					como a Cinesiologia Aplicada e as Essências Florais que objetivam 
+					a harmonização de todos os sistemas do corpo, reunindo de forma 
+					extremamente feliz elementos de cura do Ocidente e do Oriente.
 				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
-				</p>
+				
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-6">
 					<div class="card">
 						<h5 class="card-header">
-							Card title
+							Eunice B Ermel
 						</h5>
 						<div class="card-body">
 							<p class="card-text">
-								Card content
+								<img src="{% static 'img/eunice.jpeg' %}" alt="foto de Eunice Ermel" 
+						 	class="img-thumbnail float-left mr-3"/>
 							</p>
 						</div>
-						<div class="card-footer">
-							Card footer
-						</div>
+						
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<h2>
-						Heading
+						Mais sobre a instrutora
 					</h2>
 					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						
+						Formou-se em 1982, Cinesiologia Aplicada - Touch for Health - 
+						no Centro de Estudos e Pesquisa para o Homem Integral "CEPHI"- RJ. 
+						Em 1984 recebe da Touch for Health Foundation - Estados Unidos, 
+						o Certificado de Instrutora Oficial e em 1986, em San Diego - 
+						California, é homenageada pelos trabalhos realizados em Cinesiologia 
+						Aplicada. A partir de 1987 aprofunda seus conhecimentos e pesquisas 
+						na área junto ao Instituto "Three In One Concepts", Pasadena - EUA.
 					</p>
 					<p>
-						<a class="btn" href="#">View details »</a>
+						Acupunturista formada pela Associação Paulista de Acupuntura - 
+						1986, recebendo o título de Membro honorário da Associação 
+						Brasileira de Acupuntura em 1994.
 					</p>
+					<ul>
+						<li>Co-fundadora da Associação Brasileira de Essências Florais 
+						"Abreflor", em 1991, da qual foi Presidente de 1993 a 1997.</li>
+						<li>Membro da Associação Internacional de Cinesiologia 
+						Especializada "I-ASK", EUA.</li>
+						<li>Membro do "CEPHI", associado ao Centro de Hof Van Axen da 
+						Holanda, e ligado aos Centros de Cinesiologia na África do Sul, 
+						Suíça e Canadá.</li>
+					</ul>
+					<p>
+						Eunice Barrak Ermel dá atendimento em consultório, utilizando-se 
+						do conjunto de técnicas corporais e energéticas denominado Rios 
+						de Luz.
+						Autora de vários artigos sobre Terapias Naturais e Essências 
+						Florais, ministra palestras e cursos no Brasil e Exterior.
+						Dá consultoria para escolas e empresas, orientando em 
+						Cinesiologia Especializada, Ginástica Cerebral, Terapia Floral 
+						e Técnicas de Auto-Ajuda.
+					</p>
+					
 				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<h5 class="card-header">
-							Card title
-						</h5>
-						<div class="card-body">
-							<p class="card-text">
-								Card content
-							</p>
-						</div>
-						<div class="card-footer">
-							Card footer
-						</div>
-					</div>
+				
+		</div>
+	</div>
+</div>
+<footer class='main-footer mt-5 pt-4 text-light'>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h3>Entre em contato</h3>
+				<address>
+					+55 12 98301-0387
+					<br/>
+					<a href="mailto:riosdeluz.ak@gmail.com">riosdeluz.ak@gmail.com</a>
+				</address>
+
+			</div>
+		</div>
+	</div>
+	<div class="rights pb-4">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					{% now 'Y' %} Rios de Luz. Todos direitos reservados.
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
+</footer>
 
   </body>
 </html>
