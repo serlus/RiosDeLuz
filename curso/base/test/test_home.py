@@ -1,32 +1,29 @@
+import pytest
 from curso.django_assertions import assert_contains
-from django.test import Client
+from django.urls import reverse
 
 
-def test_status_code(client: Client):
-    resp = client.get('/')
+@pytest.fixture
+def resp(client):
+    resp = client.get(reverse('home'))
+    return resp
+
+
+def test_status_code(resp):
     assert resp.status_code == 200
 
 
-def test_title(client: Client):
-    resp = client.get('/')
+def test_title(resp):
     assert_contains(resp, '<title>Rios de Luz</title>')
 
 
-def test_description(client: Client):
-    resp = client.get('/')
-    assert_contains(resp, '<meta name="description" content="Source code generated using layoutit.com">')
+def test_description(resp):
+    assert_contains(resp, '<meta name="description" content="página do curso Rios de Luz">')
 
 
-def test_author(client: Client):
-    resp = client.get('/')
-    assert_contains(resp, '<meta name="author" content="LayoutIt!">')
+def test_author(resp):
+    assert_contains(resp, '<meta name="author" content="Sergio Casas">')
 
 
-def test_navbar_brand(client: Client):
-    resp = client.get('/')
-    assert_contains(resp, '<a class="navbar-brand" href="#">Navbar</a>')
-
-
-def test_nav_link_home(client: Client):
-    resp = client.get('/')
-    assert_contains(resp, '<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>')
+def test_home_link(resp):
+    assert_contains(resp, f'href="{reverse("home")}">Rios de Luz</a>')
