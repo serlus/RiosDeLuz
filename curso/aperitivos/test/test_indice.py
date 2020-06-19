@@ -12,6 +12,7 @@ def resp(client):
 def test_status_code(resp):
     assert resp.status_code == 200
 
+
 @pytest.mark.parametrize(
     'titulo',
     [
@@ -19,7 +20,6 @@ def test_status_code(resp):
         'Recados: Atendimentos'
     ]
 )
-
 def test_title_video(resp, titulo):
     assert_contains(resp, titulo)
 

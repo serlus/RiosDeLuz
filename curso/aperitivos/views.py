@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 videos = [
-        {'slug':'motivacao', 'titulo': 'Recados: Motivação', 'vimeo_id': 430007361},
-        {'slug':'atendimentos', 'titulo': 'Recados: Atendimentos', 'vimeo_id': 430004576},
+        {'slug': 'motivacao', 'titulo': 'Recados: Motivação', 'vimeo_id': 430007361},
+        {'slug': 'atendimentos', 'titulo': 'Recados: Atendimentos', 'vimeo_id': 430004576},
     ]
 
 videos_dct = {dct['slug']: dct for dct in videos}
