@@ -36,31 +36,9 @@
 	</nav>
 	{% block body %}{% endblock body %}
     
+{% include 'base/footer.html' with contato_email='contato@riosdeluz.brisaverde.life' only%}
 
-<footer class='main-footer mt-5 pt-4 text-light'>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h3>Entre em contato</h3>
-				<address>
-					<a href="tel:+5512983010387">+55 12 98301-0387</a>
-					<br/>
-					<a href="mailto:contato@riosdeluz.brisaverde.life">contato@riosdeluz.brisaverde.life</a>
-				</address>
 
-			</div>
-		</div>
-	</div>
-	<div class="rights pb-4">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					{% now 'Y' %} Rios de Luz. Todos direitos reservados.
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
 
   </body>
 </html>
