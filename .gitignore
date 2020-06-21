@@ -130,3 +130,7 @@ dmypy.json
 
 # arquivos vscode
 .vscode
+
+#postgres files for local developement
+
+.pgdata
