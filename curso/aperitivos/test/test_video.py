@@ -1,15 +1,16 @@
 import pytest
 
-from django import db
 from django.urls import reverse
 from curso.django_assertions import assert_contains
 from curso.aperitivos.models import Video
+
 
 @pytest.fixture
 def video(db):
     v = Video(slug='motivacao', titulo='Recados: Motivação', vimeo_id='430007361')
     v.save()
     return v
+
 
 @pytest.fixture
 def resp(client, video):
@@ -19,6 +20,7 @@ def resp(client, video):
 @pytest.fixture
 def resp_video_nao_encontrado(client, video):
     return client.get(reverse('aperitivos:video', args=(video.slug + 'video_nao_existente',)))
+
 
 def test_status_code_video_nao_encotrado(resp_video_nao_encontrado):
     assert resp_video_nao_encontrado.status_code == 404
@@ -33,4 +35,4 @@ def test_title_video(resp, video):
 
 
 def test_conteudo_video(resp, video):
-    assert_contains(resp, '<iframe src="https://player.vimeo.com/video/{video.vimeo_id}"')
+    assert_contains(resp, f'<iframe src="https://player.vimeo.com/video/{video.vimeo_id}"')
