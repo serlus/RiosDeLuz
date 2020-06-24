@@ -1,7 +1,9 @@
 {
     "python.pythonPath": ".venv/bin/python",
     "python.testing.pytestArgs": [
-        "curso"
+        ".",
+        "--nomigrations",
+        "-s"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
