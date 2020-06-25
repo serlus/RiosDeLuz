@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'curso.base',
     'curso.aperitivos',
-    'curso.modulos'
+    'curso.modulos',
+    'ordered_model',
 ]
 
 MIDDLEWARE = [
