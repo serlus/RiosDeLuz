@@ -1,6 +1,7 @@
-import pytest
-from model_mommy import mommy
 from django.urls import reverse
+from model_mommy import mommy
+import pytest
+
 from curso.django_assertions import assert_contains
 from curso.modulos.models import Modulo
 
