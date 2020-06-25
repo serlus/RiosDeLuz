@@ -3,6 +3,7 @@ from ordered_model.admin import OrderedModelAdmin
 
 from curso.modulos.models import Modulo
 
+
 # Register your models here.
 @admin.register(Modulo)
 class ModuloAdmin(OrderedModelAdmin):
