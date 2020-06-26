@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('curso.base.urls')),
     path('aperitivos/', include('curso.aperitivos.urls')),
+    path('modulos/', include('curso.modulos.urls')),
 ]
 
 if settings.DEBUG:
