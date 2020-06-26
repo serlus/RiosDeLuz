@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from curso.modulos import facade
 
+
 # Create your views here.
 def detalhe(request, slug):
     modulo = facade.encontrar_modulo(slug)
