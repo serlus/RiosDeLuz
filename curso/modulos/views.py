@@ -7,7 +7,6 @@ def indice(request):
     return render(request, 'modulos/indice.html', ctx)
 
 
-# Create your views here.
 def detalhe(request, slug):
     modulo = facade.encontrar_modulo(slug)
     aulas = facade.listar_aulas_de_modulo_ordenadas(modulo)

@@ -1,6 +1,8 @@
 from typing import List
 
-from curso.modulos.models import Modulo, Aula
+from django.db.models.query import Prefetch
+
+from curso.modulos.models import Aula, Modulo
 
 
 def listar_modulos_ordenados() -> List[Modulo]:
@@ -24,4 +26,10 @@ def encontrar_aula(slug):
 
 
 def listar_modulos_com_aulas():
-    return Modulo.objects.order_by('order').prefetch_related('aula_set').all()
+    """
+    Lista as aulas e modulos ordenadas.
+    """
+    aulas_ordenadas = Aula.objects.order_by('order')
+    return Modulo.objects.order_by('order').prefetch_related(
+        Prefetch('aula_set', queryset=aulas_ordenadas, to_attr='aulas')
+        ).all()
