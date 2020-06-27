@@ -3,7 +3,8 @@ from curso.modulos import facade
 
 
 def indice(request):
-    return render(request, 'modulos/indice.html')
+    ctx = {'modulos': facade.listar_modulos_com_aulas()}
+    return render(request, 'modulos/indice.html', ctx)
 
 
 # Create your views here.
