@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'curso.aperitivos',
     'curso.modulos',
     'ordered_model',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
