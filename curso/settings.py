@@ -49,10 +49,11 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'curso.base',
+    'curso.turmas',
     'curso.aperitivos',
     'curso.modulos',
     'ordered_model',
-    'django_extensions'
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
