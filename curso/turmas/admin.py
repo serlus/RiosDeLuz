@@ -10,6 +10,7 @@ class MatriculaInLine(admin.TabularInline):
     autocomplete_fields = ('usuario',)
     ordering = ('data',)
 
+
 @admin.register(Turma)
 class TurmaAdmin(admin.ModelAdmin):
     inlines = [MatriculaInLine]
