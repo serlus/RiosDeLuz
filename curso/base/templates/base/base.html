@@ -23,6 +23,7 @@
 		<a class="navbar-brand" href="{% url 'base:home' %}">Rios de Luz</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
+		  
 		</button>
 	  
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,8 +39,9 @@
 					{% endfor %}
 				</div>
 			  </li>
+			  
 		  </ul>
-		  
+		  <a  class="btn btn-light my-2" href="{% url 'login' %}">Entrar</a>
 		</div>
 	</nav>
 	{% block body %}{% endblock body %}
