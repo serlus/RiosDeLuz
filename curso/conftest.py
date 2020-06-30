@@ -1,4 +1,4 @@
-from curso.base.test.test_login import usuario
+# from curso.base.test.test_login import usuario
 import pytest
 from model_mommy import mommy
 
