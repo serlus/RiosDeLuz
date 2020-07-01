@@ -45,6 +45,10 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'curso.base',
+    'curso.turmas',
+    'curso.aperitivos',
+    'curso.modulos',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,10 +56,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    'curso.base',
-    'curso.turmas',
-    'curso.aperitivos',
-    'curso.modulos',
     'ordered_model',
     'django_extensions',
 ]
