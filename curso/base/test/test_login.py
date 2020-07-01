@@ -1,7 +1,6 @@
 import pytest
 from django.urls import reverse
 from model_mommy import mommy
-# from curso.conftest import client_com_usuario_logado
 from curso.django_assertions import assert_contains, assert_not_contains
 
 
