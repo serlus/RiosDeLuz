@@ -7,5 +7,3 @@ Aplicação disponível em https://cursoriosdeluz.herokuapp.com/
 [![Updates](https://pyup.io/repos/github/serlus/RiosDeLuz/shield.svg)](https://pyup.io/repos/github/serlus/RiosDeLuz/)
 [![Python 3](https://pyup.io/repos/github/serlus/RiosDeLuz/python-3-shield.svg)](https://pyup.io/repos/github/serlus/RiosDeLuz/)
 
-
-
