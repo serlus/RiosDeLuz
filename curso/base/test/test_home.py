@@ -23,3 +23,16 @@ def test_home_link(resp):
 
 def test_email_link(resp):
     assert_contains(resp, 'href="mailto:contato@riosdeluz.brisaverde.life"')
+
+
+def test_tab_select(resp):
+    """test for assertion tab selection
+    """
+    pass
+
+
+def test_tab_content(resp):
+    """test for assertion tab content, when Corresponding tab
+    is selected
+    """
+    pass
