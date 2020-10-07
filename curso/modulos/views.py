@@ -13,6 +13,13 @@ def detalhe(request, slug):
     aulas = facade.listar_aulas_de_modulo_ordenadas(modulo)
     return render(request, 'modulos/modulo_detalhe.html', {'modulo': modulo, 'aulas': aulas})
 
+def tema(request, slug):
+    """
+    view para demonstração das matérias que esta sendo divulgada.
+    """
+    tema = facade.encontrar_tema(slug)
+    return render(request, 'modulos/tema_detalhe.html', {'tema': tema})
+
 
 @login_required
 def aula(request, slug):

@@ -2,7 +2,7 @@ from typing import List
 
 from django.db.models.query import Prefetch
 
-from curso.modulos.models import Aula, Modulo
+from curso.modulos.models import Aula, Modulo, Tema
 
 
 def listar_modulos_ordenados() -> List[Modulo]:
@@ -23,6 +23,9 @@ def listar_aulas_de_modulo_ordenadas(modulo: Modulo):
 
 def encontrar_aula(slug):
     return Aula.objects.select_related('modulo').get(slug=slug)
+
+def encontrar_tema(slug):
+    return Tema.objects.select_related('modulo').get(slug=slug)
 
 
 def listar_modulos_com_aulas():
