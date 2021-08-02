@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from curso.modulos import facade
+from django.http import JsonResponse
 
 
 def indice(request):
@@ -18,3 +19,13 @@ def detalhe(request, slug):
 def aula(request, slug):
     aula = facade.encontrar_aula(slug)
     return render(request, 'modulos/aula_detalhe.html', {'aula': aula})
+
+@login_required
+def form(request):
+    modulos = facade.listar_modulos_ordenados()
+    return render(request, 'modulos/modulo_form.html', {'modulos': modulos})
+
+def aula_api(request, slug):
+    return JsonResponse({
+        'aulas':[{'slug': aula.slug, 'titulo': aula.titulo} for aula in facade.listar_aulas_de_modulo(slug)]
+    })

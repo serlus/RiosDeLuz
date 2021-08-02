@@ -33,3 +33,10 @@ def listar_modulos_com_aulas():
     return Modulo.objects.order_by('order').prefetch_related(
         Prefetch('aula_set', queryset=aulas_ordenadas, to_attr='aulas')
         ).all()
+
+def listar_aulas_de_modulo(modulo_slug):
+    """
+    Lista as aulas e modulos ordenadas.
+    """
+    return Aula.objects.filter(modulo__slug=modulo_slug).order_by('order').all()
+    

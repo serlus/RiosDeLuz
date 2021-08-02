@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="application/javascript">
+            $(document).ready(function(){
+                let $modulosSelect=$('#modulos-select')
+                let $aulasSelect=$('#aulas-select')
+                function buscarAulas(moduloSlug) {
+                    $aulasSelect.empty();
+                    $.get('/modulos/api/aulas/'+moduloSlug, function(data){
+                        for (const aula in data.aulas){
+                            let s = '<option value="'+ aula.slug+'">'+aula.titulo+' </option>'
+                            $aulasSelect.append(s)
+                        }
+                    });
+                }
+
+                buscarAulas($modulosSelect.val());
+                $modulosSelect.change(function(event){
+                    buscarAulas($modulosSelect.val());
+                });
+            });
+        </script>
+    </head>
+<body>
+    <select id="modulos-select">
+        {% for modulo in modulos %}
+            <option value="{{ modulo.slug }}">{{ modulo.titulo}} </option>
+        {% endfor %}
+    </select>
+    <select id="aulas-select"></select>
+</body>
+</html>

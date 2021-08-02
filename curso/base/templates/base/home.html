@@ -1,135 +1,102 @@
-{% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Rios de Luz - Home{% endblock title %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block body %}
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			
+    <title>Python Pro</title>
+
+    <meta name="description" content="Página do curso Python Pro">
+    <meta name="author" content="Renzo Nuccitelli">
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+	<link href="{% static  'css/bootstrap.min.css'  %}" rel="stylesheet">
+	<link href="{% static 'css/style.css '  %}" rel="stylesheet">
+	<script src ="{% static 'js/jquery.min.js '  %}"></script>
+	<script src ="{% static 'js/bootstrap.min.js '  %}"></script>
+	<script src ="{% static 'js/scripts.js '  %}"></script>
+
+
+  </head>
+  <body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 		<div class="container-fluid">
+ 		   <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
+ 		   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ 		     <span class="navbar-toggler-icon"></span>
+ 		   </button>
+ 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 		     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+ 		     </ul>
+		  
+ 		    </div>
+ 		</div>
+
+
+    	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							 <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							 <a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider">
+								</div> <a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+	</nav>
+
 			<div class="jumbotron">
-				<!-- <h2> -->
-					<!-- Encontros com Eunice B. Ermel -->
-				<!-- </h2> -->
-				<!--  -->
-				<!-- <p> -->
-					<!-- Cinesiologia Aplicada e as Essências Florais que objetivam a  -->
-					<!-- harmonização de todos os sistemas do corpo, reunindo de forma  -->
-					<!-- extremamente feliz elementos terapeuticos do Ocidente e do Oriente. -->
-				<!-- </p> -->
-
-				<h2>Aprofundamento - Comportamentos da Dor</h2>
+				<h2>
+					Curso de Python com Luciano Ramalho
+				</h2>
 				<p>
-					Nós o  achamos  extremamente  valioso  em  ajudar  as  pessoas  a  se  conscientizarem
-					 quanto  aos comportamentos  especıficos  que  apresentam  quando  tem  que  culpar  a  dor  
-					pela  fuga  da responsabilidade sobre si mesmas.  E, enquanto o modelo médico,  aqui 
-					parafraseado,  lida com os resultados da dor f́ısica perpetuada e não libertada, 
-					compreenda que comportamentos muito similares resultam de dor emocional continuada 
-					e não libertada.
+					Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
+					<a href="http://shop.oreilly.com/product/0636920032519.do" target="_blank" >Python Fluente</a>"
 				</p>
-
-				<h4>Pré-requisitos</h4>
-				<p>
-					Formação dos primeiros 4 módulos em Cinesiologia Aplicada/Touch for Health
-				</p>
-				
-				<h3>Próximo encontro - 14/10 (quarta-feira) - 19h</h3>
-
-				<h4>Incrições abertas</h4>
-				
-
-					<!-- INICIO DO BOTAO PAGSEGURO -->
-					<a href="https://pag.ae/7Wt8ZkV-p/button" target="_blank" title="Pagar com PagSeguro">
-						<img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar.gif" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-					</a>
-					<!-- FIM DO BOTAO PAGSEGURO -->
-				
-					<!-- INICIO DO FORMULARIO DE INSCRIÇÃO -->
-				<!-- <h4 class="mt-4">Confirme seu interesse</h4> -->
-
-				<!-- <form action="https://life.us19.list-manage.com/subscribe/post?u=65b434aa705a324ffbdae4056&amp;id=c3b5bced1b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-row align-items-center" target="_blank" novalidate> -->
-					<!-- <div class="form-row align-items-center"> -->
-						<!-- <div class="col-auto"> -->
-							<!-- <label class="sr-only" for="mce-EMAIL">email</label> -->
-							<!-- <input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="exemplo@email.com" > -->
-						<!-- </div> -->
-						<!-- <div class="col-auto"> -->
-							<!-- <label class="sr-only" for="mce-FNAME">nome</label> -->
-							<!-- <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="seu nome"> -->
-						<!-- </div> -->
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
-						<!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65b434aa705a324ffbdae4056_c3b5bced1b" tabindex="-1" value=""></div> -->
-						<!-- <div class="col-auto"> -->
-							<!-- <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"> -->
-						<!-- </div> -->
-					<!-- </div> -->
-				<!-- </form> -->
-
-				<!-- FINAL FORMULARIO DE INSCRIÇÃO -->
-				
-				
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<div class="card">
 						<h5 class="card-header">
-							Eunice B Ermel
+							Mais detalhes sobre o instrutor.
 						</h5>
 						<div class="card-body">
 							<p class="card-text">
-								<img src="{% static 'img/eunice.jpeg' %}" alt="foto de Eunice Ermel" 
-							class="img-thumbnail float-left mr-3"/>
+								<img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
+									 class="img-thumbnail float-left mr-3"/>
+								Ramalho é sócio e professor na <a href="www.python.pro.br">Python Pro</a> e autor do
+								Livro Python Fluente. Foi diretor técnico do Brasil Online, primeiro portal da Abril
+								S/A na Web. Liderou times para os portais IDG Now, BOL, UOL, AOL Brasil e outros,
+								usando Python desde 1998. Como instrutor, atendeu clientes como Citibank, CPqD, Serpro,
+								Presidência da República, Globo.com e Itaú. Palestrante em eventos internacionais
+								como FISL, PyCon US e OSCON. Ajudou a criar a Associação Python Brasil e foi seu
+								presidente. É membro da Python Software Foundation e fundador do Garoa Hacker Clube,
+								o primeiro hackerspace do Brasil.
 							</p>
 						</div>
-						
 					</div>
 				</div>
-				<div class="col-md-6">
-					<h2>
-						Mais sobre a instrutora
-					</h2>
-					<p>
-						
-						Em 1983 iniciou seus estudos em Touch for Health - Cinesiologia Aplicada -  
-						no Centro de Estudos e Pesquisa para o Homem Integral "CEPHI"- RJ. 
-						Em 1984 recebe da Touch for Health Foundation - Estados Unidos, 
-						o Certificado de Instrutora Oficial e em 1986, em San Diego - 
-						California, é homenageada pelos trabalhos realizados em Cinesiologia 
-						Aplicada. A partir de 1987 aprofunda seus conhecimentos e pesquisas 
-						na área junto ao Instituto "Three In One Concepts", Pasadena - EUA.
-					</p>
-					<p>
-						Acupunturista formada pela Associação Paulista de Acupuntura - 
-						1986, recebendo o título de Membro honorário da Associação 
-						Brasileira de Acupuntura em 1994.
-					</p>
-					<ul>
-						<li>Co-fundadora da Associação Brasileira de Essências Florais 
-							"Abreflor", em 1991, da qual foi Presidente de 1993 a 1997.
-						</li>
-						<li>Membro da Associação Internacional de Cinesiologia 
-							Especializada "I-ASK", EUA.
-						</li>
-						<li>Membro do "CEPHI", associado ao Centro de Hof Van Axen da 
-							Holanda.
-						</li>
-					</ul>
-					<p>
-						Eunice Barrak Ermel, nasceu em São Paulo, é educadora com habilitação 
-						em Psicologia Educacional e Filosofia. 
-						Dá atendimento em consultório, utilizando-se 
-						do conjunto de técnicas corporais e energéticas denominado Rios 
-						de Luz.
-						Autora de vários artigos sobre Terapias Naturais e Essências 
-						Florais, ministra palestras e cursos no Brasil e Exterior.
-						Dá consultoria para escolas e empresas, orientando em 
-						Cinesiologia Especializada, Ginástica Cerebral, Terapia Floral 
-						e Técnicas de Auto-Ajuda.
-					</p>
-					
-				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>
-{% endblock body %}
+
+
+  </body>
+</html>

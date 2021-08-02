@@ -23,6 +23,7 @@ sentry-sdk = "*"
 django-ordered-model = "*"
 ipython = "*"
 django-extensions = "*"
+coverage = "==6.0b1"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
