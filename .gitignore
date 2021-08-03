@@ -139,3 +139,5 @@ dmypy.json
 
 # personal notes
 NOTES.md
+
+*.dump
